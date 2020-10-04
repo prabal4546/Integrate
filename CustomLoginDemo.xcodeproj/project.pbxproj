@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		56B2D51462AFE4B0572F1644 /* Pods_CustomLoginDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FC198F18E7671BECD8869C /* Pods_CustomLoginDemo.framework */; };
 		830C3D8F22E7523E001FA4E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830C3D8E22E7523E001FA4E7 /* Constants.swift */; };
-		830C3D9222E755F6001FA4E7 /* loginbg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 830C3D9122E755F6001FA4E7 /* loginbg.mp4 */; };
 		8314D43322E644CC001D044A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314D43222E644CC001D044A /* AppDelegate.swift */; };
 		8314D43522E644CC001D044A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314D43422E644CC001D044A /* SceneDelegate.swift */; };
 		8314D43722E644CC001D044A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314D43622E644CC001D044A /* ViewController.swift */; };
@@ -21,12 +20,14 @@
 		8314D44B22E6452C001D044A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314D44A22E6452C001D044A /* HomeViewController.swift */; };
 		8397D20E22E64A7500CB78DD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397D20D22E64A7500CB78DD /* Utilities.swift */; };
 		911C4CE2252790BA0044DC45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 911C4CE1252790BA0044DC45 /* GoogleService-Info.plist */; };
+		91441A2F252916E600886306 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91441A2E252916E600886306 /* Message.swift */; };
+		91441A33252993F600886306 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91441A32252993F600886306 /* ChatViewController.swift */; };
+		91441A362529A80E00886306 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91441A352529A80E00886306 /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		266E92BF52F2752B81465D0D /* Pods-CustomLoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomLoginDemo.release.xcconfig"; path = "Target Support Files/Pods-CustomLoginDemo/Pods-CustomLoginDemo.release.xcconfig"; sourceTree = "<group>"; };
 		830C3D8E22E7523E001FA4E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		830C3D9122E755F6001FA4E7 /* loginbg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginbg.mp4; sourceTree = "<group>"; };
 		8314D42F22E644CC001D044A /* CustomLoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomLoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8314D43222E644CC001D044A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8314D43422E644CC001D044A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +41,9 @@
 		8314D44A22E6452C001D044A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8397D20D22E64A7500CB78DD /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		911C4CE1252790BA0044DC45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		91441A2E252916E600886306 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		91441A32252993F600886306 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		91441A352529A80E00886306 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		ACB20647BFB76A962B3E918B /* Pods-CustomLoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomLoginDemo.debug.xcconfig"; path = "Target Support Files/Pods-CustomLoginDemo/Pods-CustomLoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E2FC198F18E7671BECD8869C /* Pods_CustomLoginDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomLoginDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,14 +77,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		830C3D9022E755DB001FA4E7 /* Media */ = {
-			isa = PBXGroup;
-			children = (
-				830C3D9122E755F6001FA4E7 /* loginbg.mp4 */,
-			);
-			path = Media;
-			sourceTree = "<group>";
-		};
 		8314D42622E644CC001D044A = {
 			isa = PBXGroup;
 			children = (
@@ -104,36 +100,46 @@
 			children = (
 				8314D43222E644CC001D044A /* AppDelegate.swift */,
 				8314D43422E644CC001D044A /* SceneDelegate.swift */,
-				8397D20F22E64A7D00CB78DD /* Helpers */,
-				8314D44C22E64531001D044A /* View Controllers */,
-				830C3D9022E755DB001FA4E7 /* Media */,
-				8314D43822E644CC001D044A /* Main.storyboard */,
-				8314D43B22E644CD001D044A /* Assets.xcassets */,
-				8314D43D22E644CD001D044A /* LaunchScreen.storyboard */,
+				8397D20F22E64A7D00CB78DD /* Model */,
+				8314D44C22E64531001D044A /* Controllers */,
+				91441A2B25290D2300886306 /* View */,
 				8314D44022E644CD001D044A /* Info.plist */,
 				911C4CE1252790BA0044DC45 /* GoogleService-Info.plist */,
 			);
 			path = CustomLoginDemo;
 			sourceTree = "<group>";
 		};
-		8314D44C22E64531001D044A /* View Controllers */ = {
+		8314D44C22E64531001D044A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8314D44622E64515001D044A /* SignUpViewController.swift */,
 				8314D44822E64520001D044A /* LoginViewController.swift */,
 				8314D44A22E6452C001D044A /* HomeViewController.swift */,
 				8314D43622E644CC001D044A /* ViewController.swift */,
+				91441A32252993F600886306 /* ChatViewController.swift */,
+				91441A352529A80E00886306 /* MessageCell.swift */,
 			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		8397D20F22E64A7D00CB78DD /* Helpers */ = {
+		8397D20F22E64A7D00CB78DD /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8397D20D22E64A7500CB78DD /* Utilities.swift */,
 				830C3D8E22E7523E001FA4E7 /* Constants.swift */,
+				8314D43B22E644CD001D044A /* Assets.xcassets */,
+				91441A2E252916E600886306 /* Message.swift */,
 			);
-			path = Helpers;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91441A2B25290D2300886306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8314D43822E644CC001D044A /* Main.storyboard */,
+				8314D43D22E644CD001D044A /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +203,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8314D43F22E644CD001D044A /* LaunchScreen.storyboard in Resources */,
-				830C3D9222E755F6001FA4E7 /* loginbg.mp4 in Resources */,
 				911C4CE2252790BA0044DC45 /* GoogleService-Info.plist in Resources */,
 				8314D43C22E644CD001D044A /* Assets.xcassets in Resources */,
 				8314D43A22E644CC001D044A /* Main.storyboard in Resources */,
@@ -253,13 +258,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91441A362529A80E00886306 /* MessageCell.swift in Sources */,
 				8314D43722E644CC001D044A /* ViewController.swift in Sources */,
 				8314D43322E644CC001D044A /* AppDelegate.swift in Sources */,
 				8397D20E22E64A7500CB78DD /* Utilities.swift in Sources */,
+				91441A2F252916E600886306 /* Message.swift in Sources */,
 				8314D44722E64515001D044A /* SignUpViewController.swift in Sources */,
 				8314D44922E64520001D044A /* LoginViewController.swift in Sources */,
 				8314D43522E644CC001D044A /* SceneDelegate.swift in Sources */,
 				8314D44B22E6452C001D044A /* HomeViewController.swift in Sources */,
+				91441A33252993F600886306 /* ChatViewController.swift in Sources */,
 				830C3D8F22E7523E001FA4E7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
